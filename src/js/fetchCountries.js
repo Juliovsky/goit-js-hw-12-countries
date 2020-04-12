@@ -1,15 +1,8 @@
-import {
-    makeFetch
-} from "./api";
-//import { _ } from "lodash";
+import {makeFetch} from "./api";
 import * as _ from 'lodash';
 import PNotify from 'pnotify/dist/es/PNotify.js';
 import 'pnotify/dist/PNotifyBrightTheme.css';
 
-// Set default styling.
-//PNotify.defaults.styling = 'material';
-// This icon setting requires the Material Icons font. (See below.)
-//PNotify.defaults.icons = 'material';
 
 
 const refs = {
@@ -51,11 +44,16 @@ function template2(country) {
         languages += `<li>${language.name}</li>`
     });
 
-    html = `<p>${country.name}</p>
-        <p>Capital:${country.capital}</p>
-        <p>Population:${country.population}</p>
-        <img src=${country.flag} alt="Ukraine" width = "80px" height ="60px">
-        <ul>${languages}</ul>
+    html = `
+        <div class="maincontainer">
+        <div class="container">
+        <p class="title">${country.name}</p>
+        <p class="signat">Capital: ${country.capital}</p>
+        <p class="signat" >Population: ${country.population}</p>
+        <ul class="lang">${languages}</ul> 
+        </div>
+        <img src=${country.flag} alt="${country.name}" class="myImg" width = "320px" height ="auto">
+        </div>
         `;
     addCountry(html);
 
