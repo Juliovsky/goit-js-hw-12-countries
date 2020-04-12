@@ -50,7 +50,7 @@ function template2(country) {
         <p class="title">${country.name}</p>
         <p class="signat">Capital: ${country.capital}</p>
         <p class="signat" >Population: ${country.population}</p>
-        <ul class="lang">${languages}</ul> 
+        <ul class="lang signat">Languages:${languages}</ul> 
         </div>
         <img src=${country.flag} alt="${country.name}" class="myImg" width = "320px" height ="auto">
         </div>
