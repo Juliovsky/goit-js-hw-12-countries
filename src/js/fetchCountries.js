@@ -52,7 +52,7 @@ function template2(country) {
         <p class="signat" >Population: ${country.population}</p>
         <ul class="lang signat">Languages:${languages}</ul> 
         </div>
-        <img src=${country.flag} alt="${country.name}" class="myImg" width = "320px" height ="auto">
+        <img src=${country.flag} alt="${country.name}" class="myImg" width = "320px" height ="250px">
         </div>
         `;
     addCountry(html);
